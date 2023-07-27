@@ -21,14 +21,52 @@ lista = [1, 2, 3, 4, 5]
 n1, n2, *n = lista
 print(n1, n2, n)
 # Desempacotando a lista
-print(*lista)
+print(*lista, sep=", ")
 
 
 def test(*args):
     print(args)
-    args = list(args)
+    args = list(args)  # Fazendo um cast de T -> L
     args[0] = 99
     print(args)
 
 
 test(1, 2, 3, 4, 5)
+
+
+def test(*args):
+    print(args)
+
+
+lista = [1, 2, 3]
+test(lista, "4")
+# Desempacotando a lista
+test(*lista)
+
+# Key Words arguments
+
+
+def test(*args, **kwargs):
+    print(args)
+    print(kwargs["nome"], kwargs["sobrenome"])
+
+
+lista = [1, 2, 3, 4, 5]
+lista2 = [10, 20, 30, 40, 50]
+test(*lista, *lista2, nome="Rodrigo", sobrenome="Paiva")
+
+
+def test(*args, **kwargs):
+    print(args)
+    print(kwargs["nome"], kwargs["sobrenome"])
+
+    idade = kwargs.get("idade")
+    if idade is not None:
+        print(idade)
+    else:
+        print("Não existe")
+
+
+lista = [1, 2, 3, 4, 5]
+lista2 = [10, 20, 30, 40, 50]
+test(*lista, *lista2, nome="Rodrigo", sobrenome="Paiva")
