@@ -1,4 +1,4 @@
-from Defs import dobra
+from use_case_defs import dobra
 
 
 def par(n=0):
