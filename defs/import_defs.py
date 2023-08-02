@@ -13,4 +13,6 @@ if par(num):
     print('é par')
 else:
     print('Não é par')
+
+
 print(dobra([1, 2, 3]))
