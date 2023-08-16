@@ -1,54 +1,29 @@
-# Define a function
-def __hello():
-    print("hello")
+def jogo():
+    print("*"*50)
+    print("Bem Vindo ao Jogo da Forca")
+    print("*"*50)
+
+    palavra_secreta = "careca"
+
+    tentativa = ""
+    erros = 0
+    palavras_acertadas = []
+
+    while tentativa != palavra_secreta or erros >= 3:
+        tentativa = input("Tentativa: ").lower().strip()
+
+        if tentativa == palavra_secreta:
+            print("Você ganhou!")
+            break
+        else:
+            for index, letra in enumerate(palavra_secreta):
+                if letra in tentativa:
+                    print(letra, sep="_", end=" ")
+                    palavras_acertadas.insert(index, letra)
+                else:
+                    print("_", sep="_", end=" ")
+        print()
 
 
-name = input("Whats your name? ")
-__hello()
-print(name)
-
-
-# Creating our own parameters
-def _hello(n):
-    print("hello", n)
-
-
-name = input("Whats your name? ")
-_hello(name)
-
-
-# optional parameter
-def hello(n="World"):
-    print("hello", n)
-
-
-name = input("Whats your name? ")
-hello(name)
-
-# Why use main?
-
-
-def main():
-    name = input("Whats your name? ")
-    hello(name)
-
-
-def hello(n="World"):
-    print("hello", n)
-
-
-main()
-
-
-# returning values
-
-def main():
-    x = int(input("Whats x: "))
-    print("x squared is", square(x))
-
-
-def square(num):
-    return num * num
-
-
-main()
+if __name__ == "__main__":
+    jogo()
