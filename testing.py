@@ -1,29 +1,40 @@
-def jogo():
-    print("*"*50)
-    print("Bem Vindo ao Jogo da Forca")
-    print("*"*50)
+# Criação das variáveis iniciais que serão a base do sistema
+name = input("Digite seu nome: ")
+student = {"Name": name}
+student_subjects = []
+student_grades = []
+student_average_grade = []
 
-    palavra_secreta = "careca"
+# Pegar as matérias
+for _ in range(3):
+    student_subjects.append(input("Digite uma matéria: "))
+student["Matérias"] = student_subjects
 
-    tentativa = ""
-    erros = 0
-    palavras_acertadas = []
+# Pegar as notas
+for index, _ in enumerate(student["Matérias"]):
+    for _ in range(2):
+        student_grades.append(
+            float(input(f"Digite sua nota em {student['Matérias'][index]}: ")))
+    name = student_subjects[index]
 
-    while tentativa != palavra_secreta or erros >= 3:
-        tentativa = input("Tentativa: ").lower().strip()
+    # Trocar as Matérias por um dicionário que possua o nome de cada matéria como chave e seu conjunto de notas em cada matéria como valor
+    student["Matérias"][index] = dict(student_subjects=student_grades)
+    student["Matérias"][index][name] = student["Matérias"][index].pop(
+        "student_subjects")
+    student_grades = []
 
-        if tentativa == palavra_secreta:
-            print("Você ganhou!")
-            break
-        else:
-            for index, letra in enumerate(palavra_secreta):
-                if letra in tentativa:
-                    print(letra, sep="_", end=" ")
-                    palavras_acertadas.insert(index, letra)
-                else:
-                    print("_", sep="_", end=" ")
-        print()
+# Fazer a média das notas
+for subject in student["Matérias"]:
+    for _, grades in subject.items():
+        average_grade = sum(grades) / len(grades)
+    student_average_grade.append(average_grade)
 
+# Tratamento das variáveis para poder facilitar o uso do print no final do programa
+student_subjects = []
+student_grades = []
+for dictionary in student["Matérias"]:
+    student_subjects.append(*dictionary.keys())
+    student_grades.append(*dictionary.values())
 
-if __name__ == "__main__":
-    jogo()
+# Print final exibindo todas as informações
+print(f"O nome do aluno é {student['Name']}, as matérias que ele tem são {student_subjects}, suas notas em cada matéria são {student_grades} e, por fim, sua média em cada uma dessas matérias, respectivamente, é de {student_average_grade}")
