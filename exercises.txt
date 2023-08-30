@@ -1,0 +1,36 @@
+Exercícios Básicos de Classes e Encapsulamento:
+#1
+Crie uma classe chamada Person com atributos name e age, e um método display_info que imprime o nome e a idade da pessoa.
+
+#2
+Defina uma classe BankAccount com atributos privados balance e account_number. Crie métodos deposit e withdraw para manipular o saldo.
+
+#3
+Desenvolva uma classe Rectangle com atributos width e height. Implemente um método calculate_area para calcular e retornar a área do retângulo.
+
+#4
+Crie uma classe Student com atributos name, age e grades (uma lista). Adicione métodos para adicionar notas, calcular a média das notas e exibir as informações do aluno.
+
+#5
+Defina uma classe Car com atributos make, model e year. Crie um método start_engine que imprime uma mensagem indicando que o motor foi iniciado.
+
+#6
+Desenvolva uma classe Book com atributos title, author e year. Implemente um método get_age que retorna quantos anos o 
+livro tem desde o ano atual.
+
+#7
+Crie uma classe Employee com atributos name, position e salary. Adicione um método apply_raise que aumenta o salário do 
+funcionário em uma determinada porcentagem.
+
+#8
+Defina uma classe TemperatureConverter com métodos para converter de Celsius para Fahrenheit e vice-versa. 
+Mantenha os atributos e métodos privados.
+
+Exercícios Mais Complexos:
+#9
+Desenvolva uma classe Bank que gerencia várias contas bancárias. Os métodos devem permitir criar novas contas, 
+fazer transferências entre contas e calcular o saldo total do banco.
+
+#10
+Crie uma classe Shape com um método abstrato calculate_area. Em seguida, defina classes derivadas Circle e Triangle que herdam de Shape e 
+implementam esse método para calcular suas respectivas áreas.
