@@ -16,6 +16,6 @@ class Car:
     def __str__(self):
         return f"The {self.make}'s {self.model}, {self.year}"
     
-car = Car('Fiat', 'Strada', 2019)
+car = Car('Honda', 'Civic', 2007)
 print(car)
 print(car.start_engine())

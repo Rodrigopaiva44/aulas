@@ -6,5 +6,11 @@ class Person:
     def display_info(self):
         return f'Name: {self.name}\nAge: {self.age}'
     
-persona1 = Person('Vitor', 19)
+    @classmethod
+    def get(cls):
+        name = input('')
+        age = int(input(''))
+        return cls(name,age)
+    
+persona1 = Person.get()
 print(persona1.display_info())
