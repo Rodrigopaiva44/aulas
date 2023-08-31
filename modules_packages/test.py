@@ -1,4 +1,3 @@
-import packages
+from packages import number
 
-print(packages.dobro(2))
-print(packages.triplo(2))
+print(number.dobro(2))
