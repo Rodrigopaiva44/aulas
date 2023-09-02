@@ -8,6 +8,7 @@ Defina uma classe BankAccount com atributos privados balance e account_number. C
 #3
 Desenvolva uma classe Rectangle com atributos width e height. Implemente um método calculate_area para calcular e retornar a área do retângulo.
 
+
 #4
 Crie uma classe Student com atributos name, age e grades (uma lista). Adicione métodos para adicionar notas, calcular a média das notas e exibir as informações do aluno.
 
@@ -34,3 +35,6 @@ fazer transferências entre contas e calcular o saldo total do banco.
 #10
 Crie uma classe Shape com um método abstrato calculate_area. Em seguida, defina classes derivadas Circle e Triangle que herdam de Shape e 
 implementam esse método para calcular suas respectivas áreas.
+
+# Desafio
+Crie uma classe VerificaCPF que possui um método da classe que verifica e valida um cpf retornando True caso seja um CPF válido e False para um CPF inválido
