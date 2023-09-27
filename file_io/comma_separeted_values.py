@@ -1,7 +1,7 @@
 with open("students.csv") as file:
     for line in file:
         row = line.rstrip().split(",")  # row = linha
-        print(f"{row[0]} is from {row[1]}")
+        print(f"{row[0]} is from  {row[1]}")
 
 
 # A better way
