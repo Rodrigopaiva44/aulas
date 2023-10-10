@@ -1,11 +1,11 @@
 import argparse
 
-# parser = argparse.ArgumentParser()  # instantiating an object
-# parser.add_argument("-n")
-# args = parser.parse_args()  # this method will look sys.argv for us
+parser = argparse.ArgumentParser()  # instantiating an object
+parser.add_argument("-n")
+args = parser.parse_args()  # this method will look sys.argv for us
 
-# for _ in range(int(args.n)):  # accessing properties
-#     print("meow")
+for _ in range(int(args.n)):  # accessing properties
+    print("meow")
 
 # Its commom to run a python script with "-h" or "--help" (its optional)
 # run python parser.py -h
