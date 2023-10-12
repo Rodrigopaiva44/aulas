@@ -1,0 +1,18 @@
+# a pattern could be read like a re, "@" its a re but a weak one
+# .  any character except a newline
+# *  0 or more repetitions (repetitions = characther)
+# +  1 or more repetitions 
+# ?  0 or 1 repetitions
+# {m}  m repetitions
+# {m,n}  m-n repetitions
+
+
+# ^ matches the start of the string
+# $ matches the end of the string or just before the newline
+# at the end of the string
+
+# [] sets of characters ex: [abcdefg] [a-zA-Z0-9]
+# [^] complementing the set ex: [^@] means anything but the "@"
+
+
+# \w means world character (alpha, numeric, symble or underscore)
