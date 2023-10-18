@@ -16,3 +16,9 @@
 
 
 # \w means world character (alpha, numeric, symble or underscore)
+
+
+# A|B   either A or be
+# (...) a group
+# (?:...) non-capturing version (when we are just gruping things, dont bother)
+

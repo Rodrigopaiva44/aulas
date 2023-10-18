@@ -2,7 +2,7 @@ import re
 
 email = input("Whats your email?").strip()
 
-# # re.search(pattern,string,flags=0)
+# re.search(pattern,string,flags=0)
 
 if re.search("@", email):
     print("Valid")
@@ -34,7 +34,7 @@ else:
 # $ matches the end of the string or just before the newline
 # at the end of the string
 
-if re.search(r"^.+@.+\.com$", email):
+if re.search(r"^@.+\.com$", email):
     print("Valid")
 else:
     print("Invalid")
@@ -72,3 +72,9 @@ if re.search(r"^\w+@\w+\.(com|edu|gov|net)$", email, re.IGNORECASE):
     print("Valid")
 else:
     print("Invalid")
+
+
+if re.search(r"^.+is.+$", email):
+    print("valid")
+else:
+    print("não")

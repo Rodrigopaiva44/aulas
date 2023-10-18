@@ -25,15 +25,18 @@ with open("students.csv") as file:
         student = {"name": name, "home": home}
         students.append(student)
 
+############
+
 
 def get_name(student):  # Is not obvious how we sort objects inside a dict
     return student["name"]
+############
 
 
 # 4
 for student in sorted(students, key=get_name):
     print(f"{student['name']} is from {student['home']}")
-#########
+
 
 for student in sorted(students, key=lambda student: student["name"]):
     print(f"{student['name']} is from {student['home']}")
