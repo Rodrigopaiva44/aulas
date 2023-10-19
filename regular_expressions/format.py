@@ -5,10 +5,10 @@ import re
 # Without REGEX
 
 name = input("Name: ").strip()
-# if "," in name:
-#     last, first = name.split(", ")  # name.split(", ?") REGEX
-#     name = f"{first} {last}"
-# print(f"hello, {name}")
+if "," in name:
+    last, first = name.split(", ")  # name.split(", ?") REGEX
+    name = f"{first} {last}"
+print(f"hello, {name}")
 
 # Note that in this example the input is coming from the keyboard, from you.
 # At csv file for example, we dont have that situation.
@@ -52,6 +52,7 @@ if matches := re.search(r"^(.+), *(.+)$", name):  # := (walrus operator)
     last, first = matches.groups()
     name = f"{first} {last}"
 print(f"hello, {name}")
-# we can do both things:
+
+# with this new symbol we can do both things:
 # Create a variable called "matches" that contains re.search() return
-# And verifying the if conditional: if True/False:
+# And verifying the if conditional: if matches does exist(True) or not(False):
